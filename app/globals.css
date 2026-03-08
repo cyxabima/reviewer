@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=DM+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-display);
+}
+
+body {
+  background-color: #f5f4f0;
+  color: #28251e;
+  min-height: 100vh;
+}
+
+::selection {
+  background: #c84b31;
+  color: #f5f4f0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #eae8e0; }
+::-webkit-scrollbar-thumb { background: #b8b3a0; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #7a7462; }
+
+/* Transitions */
+.btn {
+  @apply transition-all duration-150 cursor-pointer;
+}
+
+/* Card paper texture */
+.paper {
+  background-color: #faf9f5;
+  box-shadow:
+    0 1px 2px rgba(20,18,16,0.06),
+    0 4px 16px rgba(20,18,16,0.08),
+    inset 0 0 0 1px rgba(20,18,16,0.06);
+}
+
+.paper-raised {
+  background-color: #faf9f5;
+  box-shadow:
+    0 2px 4px rgba(20,18,16,0.08),
+    0 8px 32px rgba(20,18,16,0.12),
+    inset 0 0 0 1px rgba(20,18,16,0.08);
+}
